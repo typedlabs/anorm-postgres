@@ -1,7 +1,26 @@
 # anorm-postgres
 Anorm Toolkit and Extensions to work with PostgreSQL database
 
-## Connect to Postgres
+
+1. [SBT](#sbt)
+2. [Connect](#connect)
+2. [Migrations](#migrations)
+4. [Supported Extensions](#supported-extensions)
+4. [Util](#util)
+
+## Quick start
+
+### SBT
+
+[ ![Download](https://api.bintray.com/packages/typedlabs/releases/anorm-postgres/images/download.svg) ](https://bintray.com/typedlabs/releases/anorm-postgres/_latestVersion)
+
+In `plugins.sbt`, add the following bintray resolver
+
+```scala
+Resolver.bintrayIvyRepo("typedlabs", "releases")
+```
+
+## Connect
 
 To connect to a postgresql database you can add the following settings on an application.conf file
 
@@ -57,6 +76,6 @@ migration.migrate
 * PostGIS
 * Json(play-json)
 
-## DAO
+## Util
 anorm-postgres also has an util class DAO[A] which has some useful boilerplate when working with anorm.
 
