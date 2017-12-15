@@ -2,11 +2,24 @@ name := "anormPostgres"
 
 organization := "com.typedlabs"
 
-version := "0.1.0"
+version := "0.1.1"
 
 scalaVersion := "2.12.4"
 
-crossScalaVersions := Seq("2.11.8", "2.12.4")
+crossScalaVersions := Seq(scalaVersion.value, "2.11.8")
+
+bintrayRepository := "releases"
+
+bintrayOrganization := Some("typedlabs")
+
+bintrayPackageLabels := Seq("scala", "anorm", "postgresql", "sql", "postgres")
+
+bintrayVcsUrl := Some("https://github.com/typedlabs/anorm-postgres")
+
+licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
+
+publishMavenStyle := false
+
 
 scalacOptions ++= Seq(
     "-encoding",
@@ -44,7 +57,7 @@ libraryDependencies ++= Seq(
   "com.zaxxer"                 % "HikariCP"          % "2.6.3",
 
   //-- ANORM
-  "com.typesafe.play"          %% "anorm"            % "2.6.3",
+  "com.typesafe.play"          %% "anorm"            % "2.5.3",
 
   //-- JSON
   "com.typesafe.play"         %% "play-json"        % "2.6.3",
