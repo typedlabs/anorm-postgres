@@ -58,5 +58,5 @@ migration.migrate
 * Json(play-json)
 
 ## DAO
-anorm-postgres also has an Util class DAO[A] which has some useful boilerplate when working when anorm.
+anorm-postgres also has an util class DAO[A] which has some useful boilerplate when working with anorm.
 
